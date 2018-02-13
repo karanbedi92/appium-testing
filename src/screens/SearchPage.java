@@ -17,11 +17,6 @@ public class SearchPage extends DriverActions{
     }
     
     public SearchPage searchProduct() throws InterruptedException {
-//    	MobileElement el4 = (MobileElement) driver.findElement(searchBox);
-//   	 el4.click();
-//   	 MobileElement el5 = (MobileElement) driver.findElement(searchBoxTxt);
-//   	 el5.sendKeys("one plus 5t cover");
-//   	Thread.sleep(5000);
     	elementClick(searchBox);
     	elementSendKeys(searchBoxTxt,"one plus 5t cover");
     	elementClick(selectOption);
