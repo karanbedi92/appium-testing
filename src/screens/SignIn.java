@@ -3,6 +3,7 @@ package screens;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import io.appium.java_client.AppiumDriver;
 import support_libraries.DriverActions;
 
 public class SignIn extends DriverActions {
@@ -10,7 +11,7 @@ public class SignIn extends DriverActions {
     By password = By.id("com.ebay.mobile:id/edit_text_password");
     By signInButton = By.id("com.ebay.mobile:id/button_sign_in");
     
-    public SignIn(WebDriver driver) {
+    public SignIn(AppiumDriver driver) {
     	super(driver);
     }
     public SignIn loginIn() {

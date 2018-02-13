@@ -8,11 +8,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 @SuppressWarnings("rawtypes")
 public class AndroidDriverSetup {
 	
-	protected AndroidDriver driver;
+	protected AppiumDriver driver;
 
     protected void prepareAndroidForAppium() throws MalformedURLException {
     	//fetching the application (.apk) path

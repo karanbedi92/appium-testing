@@ -6,14 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 
 public class DriverActions {
 
-    protected WebDriver driver;
+    protected AppiumDriver driver;
 
-    public DriverActions(WebDriver driver) {
+    public DriverActions(AppiumDriver driver) {
         this.driver = driver;
     }
 

@@ -8,6 +8,7 @@ import io.appium.java_client.TouchAction;
 import screens.EbayHome;
 import screens.LinkAccount;
 import screens.SearchPage;
+import screens.SelectProduct;
 import screens.SignIn;
 
 import org.testng.annotations.BeforeTest;
@@ -29,7 +30,8 @@ public class AppiumTest extends AndroidDriverSetup{
 	 Thread.sleep(1000);
 	 new SearchPage(driver).searchProduct();
 	 Thread.sleep(10000);
-	 (new TouchAction(driver)).press(521,1223).moveTo(4,-269).release().perform();
+	 new SelectProduct(driver).selectProduct();
+//	 (new TouchAction(driver)).press(521,1223).moveTo(4,-269).release().perform();
 	 Thread.sleep(10000);
 	  }
 	  catch (Exception e) {
