@@ -13,8 +13,8 @@ public class EbayHome {
     	this.driver = driver;
     }
     public EbayHome navigateSignIn() {
-    driver.findElement(By.id("com.ebay.mobile:id/home")).click();
-	 driver.findElement(By.id("com.ebay.mobile:id/home")).click();
+    driver.findElement(sideMenu).click();
+	 driver.findElement(signIn).click();
 	 return new EbayHome(driver);
     }
 }
