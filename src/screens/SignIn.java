@@ -3,20 +3,21 @@ package screens;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SignIn {
-	protected WebDriver driver;
+import support_libraries.DriverActions;
+
+public class SignIn extends DriverActions {
     By username = By.id("com.ebay.mobile:id/edit_text_username");
     By password = By.id("com.ebay.mobile:id/edit_text_password");
     By signInButton = By.id("com.ebay.mobile:id/button_sign_in");
     
     public SignIn(WebDriver driver) {
-    	this.driver = driver;
+    	super(driver);
     }
     public SignIn loginIn() {
-    driver.findElement(username).sendKeys("karanbedi792@gmail.com");
-	 driver.findElement(password).sendKeys("Jan@2018");
-	 driver.findElement(signInButton).click();
-	 return new SignIn(driver);
+    	elementSendKeys(username, "karanbedi792@gmail.com");
+    	elementSendKeys(password, "Jan@2018");
+    	elementClick(signInButton);
+    	return new SignIn(driver);
     }
 
 }

@@ -3,6 +3,8 @@ package scenarios;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
 import screens.EbayHome;
 import screens.LinkAccount;
 import screens.SearchPage;
@@ -11,6 +13,7 @@ import screens.SignIn;
 import org.testng.annotations.BeforeTest;
 
 import java.net.MalformedURLException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterTest;
@@ -25,6 +28,8 @@ public class AppiumTest extends AndroidDriverSetup{
 	 new LinkAccount(driver).denyGoogleLinkRequest();
 	 Thread.sleep(1000);
 	 new SearchPage(driver).searchProduct();
+	 Thread.sleep(10000);
+	 (new TouchAction(driver)).press(521,1223).moveTo(4,-269).release().perform();
 	 Thread.sleep(10000);
 	  }
 	  catch (Exception e) {

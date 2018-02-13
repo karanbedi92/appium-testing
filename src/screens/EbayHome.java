@@ -4,17 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class EbayHome {
-	protected WebDriver driver;
+import support_libraries.DriverActions;
+
+public class EbayHome extends DriverActions {
     By sideMenu = By.id("com.ebay.mobile:id/home");
     By signIn = By.id("com.ebay.mobile:id/home");
     
     public EbayHome(WebDriver driver) {
-    	this.driver = driver;
+    	super(driver);
     }
     public EbayHome navigateSignIn() {
-    driver.findElement(sideMenu).click();
-	 driver.findElement(signIn).click();
-	 return new EbayHome(driver);
+    	elementClick(sideMenu);
+    	elementClick(signIn);
+    	return new EbayHome(driver);
     }
 }

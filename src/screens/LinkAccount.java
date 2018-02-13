@@ -3,15 +3,16 @@ package screens;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LinkAccount {
-	protected WebDriver driver;
+import support_libraries.DriverActions;
+
+public class LinkAccount extends DriverActions{
     By noThanksButton = By.id("com.ebay.mobile:id/button_google_deny");
     
     public LinkAccount(WebDriver driver) {
-    	this.driver = driver;
+    	super(driver);
     }
     public LinkAccount denyGoogleLinkRequest() {
-    driver.findElement(noThanksButton).click();
-	 return new LinkAccount(driver);
+    	elementClick(noThanksButton);
+    	return new LinkAccount(driver);
     }
 }
