@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class Setting {
 	
-	Properties properties = new Properties();
+	static Properties properties = new Properties();
 
 	public Setting(){
 
@@ -22,5 +22,7 @@ public class Setting {
 		System.out.println("IOException while loading the appium-testing properties file");
 	}
 	}
-	
+	public static Properties getInstance() {
+		return properties;
+	}
 }
