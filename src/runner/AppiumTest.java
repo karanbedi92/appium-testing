@@ -3,11 +3,14 @@ package runner;
 import org.testng.annotations.Test;
 import screens.EbayHome;
 import screens.LinkAccount;
+import screens.ProductBuy;
 import screens.SearchPage;
 import screens.SelectProduct;
 import screens.SignIn;
 import org.testng.annotations.BeforeTest;
 import java.net.MalformedURLException;
+
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 
 /**
@@ -23,15 +26,22 @@ public class AppiumTest extends AndroidDriverSetup {
 	@Test
 	public void validateProductCheckout() {
 		try {
+			Reporter.log("Application Lauched successfully |");
 			new EbayHome(driver).navigateSignIn();
+			Reporter.log("Navigated to Sign in successfully | ");
 			new SignIn(driver).loginIn();
+			Reporter.log("Successfully logged in | ");
 			new LinkAccount(driver).denyGoogleLinkRequest();
 			new SearchPage(driver).searchProduct();
+			Reporter.log("Product searched successfully | ");
 			Thread.sleep(10000);
 			new SelectProduct(driver).selectProduct();
-			Thread.sleep(10000);
+			Reporter.log("Product selected successfully | ");
+			new ProductBuy(driver).buyProduct();
+			Reporter.log("Poduct bought successfully ");
 		} catch (Exception e) {
 			System.out.println(e);
+			Reporter.log("Application Testing Failed with following error : " + e);
 		}
 	}
 

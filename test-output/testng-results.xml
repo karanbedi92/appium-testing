@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Application Lauched successfully |]]>
+    </line>
+    <line>
+      <![CDATA[Navigated to Sign in successfully | ]]>
+    </line>
+    <line>
+      <![CDATA[Successfully logged in | ]]>
+    </line>
+    <line>
+      <![CDATA[Product searched successfully | ]]>
+    </line>
+    <line>
+      <![CDATA[Product selected successfully | ]]>
+    </line>
+    <line>
+      <![CDATA[Poduct bought successfully ]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64875" started-at="2018-02-13T04:45:35Z" finished-at="2018-02-13T04:46:40Z">
+  <suite name="Default suite" duration-ms="94373" started-at="2018-02-14T11:50:14Z" finished-at="2018-02-14T11:51:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="64875" started-at="2018-02-13T04:45:35Z" finished-at="2018-02-13T04:46:40Z">
-      <class name="scenarios.AppiumTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scenarios.AppiumTest@5034c75a]" name="beforeTest" is-config="true" duration-ms="38617" started-at="2018-02-13T10:15:35Z" finished-at="2018-02-13T10:16:13Z">
+    <test name="Default test" duration-ms="94373" started-at="2018-02-14T11:50:14Z" finished-at="2018-02-14T11:51:48Z">
+      <class name="runner.AppiumTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:runner.AppiumTest@754ba872]" name="beforeTest" is-config="true" duration-ms="24485" started-at="2018-02-14T17:20:14Z" finished-at="2018-02-14T17:20:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:scenarios.AppiumTest@5034c75a]" name="signIn" duration-ms="23856" started-at="2018-02-13T10:16:13Z" finished-at="2018-02-13T10:16:37Z">
+        <test-method status="PASS" signature="validateProductCheckout()[pri:0, instance:runner.AppiumTest@754ba872]" name="validateProductCheckout" duration-ms="66649" started-at="2018-02-14T17:20:39Z" finished-at="2018-02-14T17:21:45Z">
           <reporter-output>
+            <line>
+              <![CDATA[Application Lauched successfully |]]>
+            </line>
+            <line>
+              <![CDATA[Navigated to Sign in successfully | ]]>
+            </line>
+            <line>
+              <![CDATA[Successfully logged in | ]]>
+            </line>
+            <line>
+              <![CDATA[Product searched successfully | ]]>
+            </line>
+            <line>
+              <![CDATA[Product selected successfully | ]]>
+            </line>
+            <line>
+              <![CDATA[Poduct bought successfully ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:scenarios.AppiumTest@5034c75a]" name="afterTest" is-config="true" duration-ms="2365" started-at="2018-02-13T10:16:37Z" finished-at="2018-02-13T10:16:40Z">
+        </test-method> <!-- validateProductCheckout -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:runner.AppiumTest@754ba872]" name="afterTest" is-config="true" duration-ms="3160" started-at="2018-02-14T17:21:45Z" finished-at="2018-02-14T17:21:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- scenarios.AppiumTest -->
+      </class> <!-- runner.AppiumTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

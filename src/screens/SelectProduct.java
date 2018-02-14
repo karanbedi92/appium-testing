@@ -23,6 +23,7 @@ public class SelectProduct extends DriverActions {
 			rotateScreen("portrait");
 		}
 		screenSwipe(521, 1223, 4, -269);
+		elementTap(479, 588);
 	}
 
 }

@@ -31,6 +31,12 @@ public class DriverActions {
 		driver.findElement(elementSelector).click();
 	}
 
+	@SuppressWarnings("deprecation")
+	protected void elementTap(int x,int y) {
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(479, 588).perform();
+	}
+	
 	protected void elementSendKeys(By elementSelector, String value) {
 		driver.findElement(elementSelector).sendKeys(value);
 	}
