@@ -1,6 +1,5 @@
 package support_libraries;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,8 +11,7 @@ public class Setting {
 	static Properties properties = new Properties();
 	public Setting(){
 		try {
-			String dir = System.getProperty("user.dir");
-	        InputStream inputStream = new FileInputStream(dir + "/appium-testing.properties");
+	        InputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "/appium-testing.properties");
 	        properties.load(inputStream);
 	        inputStream.close();
 		} catch (FileNotFoundException e) {

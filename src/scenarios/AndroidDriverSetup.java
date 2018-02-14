@@ -19,12 +19,16 @@ public class AndroidDriverSetup {
 
     protected void prepareAndroidForAppium() throws MalformedURLException {
     	Setting appiumProperties=new Setting();
-    	System.out.println(appiumProperties.getInstance().getProperty("InstallApplicationInDevice"));
+    	System.out.println();
+    	File app=null;
     	
-    	//fetching the application (.apk) path
-		File classpathRoot = new File(System.getProperty("user.dir"));
-		File appDir = new File(classpathRoot, "/apps/");
-		File app = new File(appDir, appiumProperties.getInstance().getProperty("Android_APK_Name"));
+    	if(Boolean.parseBoolean(appiumProperties.getInstance().getProperty("InstallApplicationInDevice"))) {
+    		//fetching the application (.apk) path if InstallApplicationInDevice property is true
+    		System.out.println(Boolean.parseBoolean(appiumProperties.getInstance().getProperty("InstallApplicationInDevice")));
+    		File classpathRoot = new File(System.getProperty("user.dir"));
+    		File appDir = new File(classpathRoot, "/apps/");
+    		app = new File(appDir, appiumProperties.getInstance().getProperty("Android_APK_Name"));
+    	}
 		
 		//desired capabilities initialization for test execution
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -32,7 +36,11 @@ public class AndroidDriverSetup {
 		capabilities.setCapability("deviceName", appiumProperties.getInstance().getProperty("Device_Name"));
 		capabilities.setCapability("platformVersion", appiumProperties.getInstance().getProperty("Platform_Version"));
 		capabilities.setCapability("platformName", appiumProperties.getInstance().getProperty("platformVersion"));
+		
+		if(Boolean.parseBoolean(appiumProperties.getInstance().getProperty("InstallApplicationInDevice"))) {
 		capabilities.setCapability("app", app.getAbsolutePath());
+		}
+		
 		capabilities.setCapability("appPackage", appiumProperties.getInstance().getProperty("Application_Package_Name"));
 		capabilities.setCapability("appActivity", appiumProperties.getInstance().getProperty("Application_MainActivity_Name"));
 		
