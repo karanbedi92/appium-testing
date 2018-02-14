@@ -28,13 +28,18 @@ public class SearchPage extends DriverActions {
 		ExcelUtils.setExcelFile("datasheet.xlsx", "search_product");
 	}
 
-	public SearchPage searchProduct() throws Exception {
+	public void searchProduct() throws Exception {
+		if(getOrientation()=="landscape") {
+			rotateScreen("portrait");
+		}
+		waitForVisibilityOf(searchBox, 30);
 		elementClick(searchBox);
 
 		// Fetching the data from excel i.e product name to be searched in this case.
 		elementSendKeys(searchBoxTxt, ExcelUtils.getCellData(1, 0));
+		
+		waitForVisibilityOf(selectOption, 30);
 		elementClick(selectOption);
-		return new SearchPage(driver);
 	}
 
 }

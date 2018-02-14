@@ -4,17 +4,16 @@ import io.appium.java_client.AppiumDriver;
 import support_libraries.DriverActions;
 
 /**
- * Page object model Class for select product screen. Contains methods to select
- * the product in the app.
+ * Page object model Class for product buy screen. 
  * 
  * @author Karan Bedi
  * @email Karan.Bedi@cognizant.com
  */
 
-public class SelectProduct extends DriverActions {
+public class ProductBuy extends DriverActions {
 
 	@SuppressWarnings("rawtypes")
-	public SelectProduct(AppiumDriver driver) {
+	public ProductBuy(AppiumDriver driver) {
 		super(driver);
 	}
 
@@ -22,7 +21,6 @@ public class SelectProduct extends DriverActions {
 		if(getOrientation()=="landscape") {
 			rotateScreen("portrait");
 		}
-		screenSwipe(521, 1223, 4, -269);
 	}
 
 }

@@ -26,12 +26,17 @@ public class SignIn extends DriverActions {
 		ExcelUtils.setExcelFile("datasheet.xlsx", "sign_in");
 	}
 
-	public SignIn loginIn() throws Exception {
+	public void loginIn() throws Exception {
+		if(getOrientation()=="landscape") {
+			rotateScreen("portrait");
+		}
 
+		waitForVisibilityOf(username, 30);
+		
 		// Fetching the data from excel i.e username & password in this case.
 		elementSendKeys(username, ExcelUtils.getCellData(1, 1));
 		elementSendKeys(password, ExcelUtils.getCellData(1, 2));
+		waitForClickabilityOf(signInButton,30);
 		elementClick(signInButton);
-		return new SignIn(driver);
 	}
 }

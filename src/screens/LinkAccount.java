@@ -20,8 +20,8 @@ public class LinkAccount extends DriverActions {
 		super(driver);
 	}
 
-	public LinkAccount denyGoogleLinkRequest() {
+	public void denyGoogleLinkRequest() {
+		waitForVisibilityOf(noThanksButton, 30);
 		elementClick(noThanksButton);
-		return new LinkAccount(driver);
 	}
 }

@@ -21,9 +21,11 @@ public class EbayHome extends DriverActions {
 		super(driver);
 	}
 
-	public EbayHome navigateSignIn() {
+	public void navigateSignIn() {
+		if(getOrientation()=="landscape") {
+			rotateScreen("portrait");
+		}
 		elementClick(sideMenu);
 		elementClick(signIn);
-		return new EbayHome(driver);
 	}
 }
