@@ -14,7 +14,7 @@ public class SignIn extends DriverActions {
     
     public SignIn(AppiumDriver driver) throws Exception {
     	super(driver);
-    	ExcelUtils.setExcelFile("C://Users//admin//workspace//AppiumTesting//src//test_data//datasheet.xlsx", "sign_in");
+    	ExcelUtils.setExcelFile("datasheet.xlsx", "sign_in");
     }
     public SignIn loginIn() throws Exception {
     	elementSendKeys(username, ExcelUtils.getCellData(1, 1));
