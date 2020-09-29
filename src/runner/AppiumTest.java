@@ -1,6 +1,7 @@
 package runner;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
+//import org.testng.annotations.Test;
 import screens.EbayHome;
 import screens.LinkAccount;
 import screens.ProductBuy;
