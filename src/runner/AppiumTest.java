@@ -1,18 +1,14 @@
 package runner;
 
-import org.junit.Test;
-//import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import screens.EbayHome;
 import screens.LinkAccount;
 import screens.ProductBuy;
 import screens.SearchPage;
 import screens.SelectProduct;
 import screens.SignIn;
-import org.testng.annotations.BeforeTest;
 import java.net.MalformedURLException;
-
 import org.testng.Reporter;
-import org.testng.annotations.AfterTest;
 
 /**
  * TestNg class where actual test executes. "validateProductCheckout" method

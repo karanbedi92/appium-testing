@@ -42,7 +42,7 @@ public class AndroidDriverSetup {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("deviceName", appiumProperties.getInstance().getProperty("Device_Name"));
 		capabilities.setCapability("platformVersion", appiumProperties.getInstance().getProperty("Platform_Version"));
-		capabilities.setCapability("platformName", appiumProperties.getInstance().getProperty("platformVersion"));
+		capabilities.setCapability("platformName", appiumProperties.getInstance().getProperty("platform_Name"));
 
 		// Enabling application (.apk) install if InstallApplicationInDevice property is true.
 		if (Boolean.parseBoolean(appiumProperties.getInstance().getProperty("InstallApplicationInDevice"))) {
